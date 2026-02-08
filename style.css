@@ -1,0 +1,28 @@
+:root{
+  --bg:#f6f8fb; --card:#ffffff; --text:#1b2430; --accent:#0b84ff;
+}
+[data-theme="dark"]{
+  --bg:#0f1720; --card:#0b1220; --text:#e6eef8; --accent:#4aa3ff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; font-family:Inter, system-ui, Arial, sans-serif;
+  background:linear-gradient(180deg,var(--bg),#e9f0ff 60%);
+  color:var(--text); padding:2rem;
+}
+.container{max-width:900px;margin:0 auto;display:grid;gap:1.25rem}
+.header{display:flex;justify-content:space-between;align-items:center}
+h1{margin:0;font-size:1.6rem}
+.card{background:var(--card);padding:1.25rem;border-radius:12px;box-shadow:0 6px 18px rgba(11,20,40,0.08)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+p{line-height:1.5;margin:0.5rem 0}
+.btn{
+  display:inline-block;padding:0.5rem 0.9rem;border-radius:8px;
+  background:var(--accent);color:white;text-decoration:none;border:none;cursor:pointer;
+  font-weight:600;
+}
+.btn.outline{
+  background:transparent;color:var(--accent);border:2px solid var(--accent);margin-left:0.5rem;
+}
+.footer{font-size:0.9rem;color:rgba(0,0,0,0.6)}
+@media (max-width:700px){.grid{grid-template-columns:1fr}}
